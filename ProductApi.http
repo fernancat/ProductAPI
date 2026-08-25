@@ -1,6 +1,37 @@
-@ProductApi_HostAddress = http://localhost:5123
+@ProductApi_HostAddress = http://localhost:5000
 
-GET {{ProductApi_HostAddress}}/weatherforecast/
+GET {{ProductApi_HostAddress}}/api/products
 Accept: application/json
+
+###
+
+GET {{ProductApi_HostAddress}}/api/products/1
+Accept: application/json
+
+###
+
+POST {{ProductApi_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "nombre": "Laptop HP",
+  "precio": 12500.50,
+  "stock": 10
+}
+
+###
+
+PUT {{ProductApi_HostAddress}}/api/products/1
+Content-Type: application/json
+
+{
+  "nombre": "Laptop HP Pavilion",
+  "precio": 13999.99,
+  "stock": 8
+}
+
+###
+
+DELETE {{ProductApi_HostAddress}}/api/products/1
 
 ###
